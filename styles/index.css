@@ -1,0 +1,1412 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    
+}
+
+body {
+    width: 1440px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.custom-navbar {
+    width: 1440px;
+    height: 121px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 65px  64px; /* Adjusted bottom padding to 0 for space management */
+    box-sizing: border-box;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 370px;
+    height: 54px;
+    margin-top:25px;
+    margin-left: 10px;
+}
+
+.navbar-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: calc(100% - 354px - 64px); /* Full width minus the logo width and padding */
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    width: 101px;
+    height: 15.5px;
+
+}
+
+.social-icons a {
+    color: rgb(0, 0, 0);
+    font-size: 15.5px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #000000;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column; /* Stack menu items and greeting vertically */
+    align-items: flex-end;
+    width:734px;
+    margin-top: 23.5px; /* Space between social icons and nav-link */
+    line-height: 22.5px;
+   
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    width:734px;
+    height: 29px;
+
+}
+
+.navbar-menu li {
+    display: flex;
+    height: 23px;
+    line-height: 22.5px;
+    align-items: center;
+    
+    
+    
+}
+
+.navbar-menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0px 0px;
+    
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu li a:hover {
+    color: #f0f0f0;
+}
+
+.navbar-menu li a i {
+    margin-right: 5px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 22px; /* Distance between notification icon and profile link */
+}
+.icon-container li a {
+    padding:0px 5px;
+    text-align: center;
+    position: relative;
+}
+
+.notification-icon {
+    
+    width: 24px;
+    height: 24px;
+}
+.icon-container li a .notification_span{
+    position:absolute;
+    background-color: green;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid #f0f0f0;
+    top: 0;
+    right: 0;
+   
+}
+
+.profile-link {
+    background-color: black;
+    color: white !important;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    width: 114px;
+    height: 29px !important;
+}
+.profile-link a{
+
+    height: 29px !important;
+}
+
+.profile-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.greeting{
+   
+    font-weight: 400; /* Font weight of 400 */
+    font-size: 10px; /* Font size of 10px */
+    line-height: 56.74px; /* Line height of 56.74px */
+    letter-spacing: -0.035em; /* Adjust letter spacing by -3.5% */
+    text-align: center; /* Center align the text */
+    width: 770px; /* Set width to 770px */
+    height: 7px; /* Set height to 7px */
+    opacity: 50%;
+    
+}
+
+
+/* slid in buttons */
+.slide-in-button-1{
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 20px 20px 0px;
+    margin-right: 5px;
+    border-radius: 20px 0px 0px 20px;
+    background: transparent;
+    transition: width 0.3s ease;
+    
+}
+
+.slide-in-button-1:hover{
+    width: 200px;
+}
+
+.slide-in-contents{
+    background-color: #fff;
+    height: 45px;
+    width: 200px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    outline: none;
+    border: none;
+}
+
+.slide-in-contents .contact-img{
+    margin-left: 10px;
+    padding-right: 20px;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+}
+.slide-in-contents .customer-img{
+    padding-right: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+}
+
+.slide-in-contents p{
+    margin: 0;
+}
+
+
+.slide-in-button-2{
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+    top: 99px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 20px 20px 0px;
+    margin-right: 5px;
+    border-radius: 20px 0px 0px 20px;
+    background: transparent;
+    transition: width 0.3s ease;
+}
+
+.slide-in-button-2:hover{
+    width: 200px;
+}
+
+
+
+/* layer2 */
+.Layer_2 {
+    position: relative;
+    height: 227px;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.Layer_2 img {
+    width: 100%;
+    height: auto; /* Adjust as needed */
+}
+
+
+/* Vehicle options section */
+.vehicle-options-container {
+    position: absolute;
+    top: 18px;
+    left: 145px;
+    height: 57px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding-left: 0; /* Add padding to ensure the content starts from the edge */
+}
+
+/* Menu list styling */
+.vehicle-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;
+    gap: 32px;
+   
+}
+
+/* Individual menu item */
+.vehicle-menu li {
+    margin: 0;
+    align-items: center;
+}
+
+/* Base link styling */
+.vehicle-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    position: relative; /* Position relative to contain the underline span */
+    padding-bottom: 5px; /* Add some space at the bottom for the underline */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+   
+}
+
+/* Span element for underline */
+.vehicle-menu a span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+/* Active state: when the link is clicked */
+.vehicle-menu a.active {
+    opacity: 1;
+}
+
+/* Active state: underline becomes visible */
+.vehicle-menu a.active span {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Container for the dropdown and custom arrow */
+.custom-dropdown-container {
+    position: relative;
+    width: 100%; /* Ensure container matches dropdown width */
+    height: 100%; /* Ensure container matches dropdown height */
+}
+
+/* Dropdown styling */
+.vehicle-dropdown {
+    width: 169px;
+    height: 29px;
+    border-radius: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    border: 0;
+    padding: 0px 10px;
+    appearance: none; /* Remove default dropdown arrow */
+    background: #ffffff24;
+    color: #ffffff;
+    outline: none;
+    text-align: left;
+    
+    
+}
+
+/* Custom arrow styling */
+.custom-dropdown-arrow {
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 5px;
+    pointer-events: none; /* Ensure the arrow doesn't interfere with dropdown interaction */
+}
+
+.custom-dropdown-arrow img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* Content container */
+.content {
+    position: absolute;
+    width: auto; /* Adjust to full width */
+    height: 42px;
+    top: 90px;
+    left: 145px; /* Align to left edge */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px; /* Gap between fields */
+    opacity: 1; /* Adjust opacity if needed */
+}
+
+/* Dropdown container */
+.dropdown-container {
+    position: relative;
+    height: 42px;
+    width: 188px;
+}
+
+.dropdown {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    border: 0;
+    appearance: none;
+    padding-left: 35px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.dropdown-icon,
+.dropdown-arrow {
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.dropdown-icon {
+    left: 16px;
+    top: 15px;
+    width: 9px;
+    height: 12px;
+}
+
+.dropdown-arrow {
+    right: 16px;
+    top: 20%;
+    width: 7px;
+    height: 5px;
+}
+
+.dropdown-arrow img,
+.dropdown-icon img {
+    width: 100%;
+    height: auto;
+}
+
+/* Date field container */
+.date-container {
+    position: relative;
+    width: 188px;
+    height: 42px;
+}
+
+/* Date field input */
+.date-field {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    border: 0;
+    padding-left: 35px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #333;
+    outline: none;
+}
+
+/* Date field location icon */
+.date-icon {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+}
+
+.date-icon img {
+    width: 10px;
+    height:10px ;
+}
+
+/* Date field time text */
+.date-time-text {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    font-weight: 400;
+    color: #333;
+}
+
+.date-time-text span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Search button */
+.searchButton button {
+    width: 64px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.searchButton button img {
+    width: 26px;
+    height: 26px;
+}
+
+/* Vertical line */
+.vertical-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 42px;
+}
+
+.vertical-line img {
+   width:10px;
+   height: inherit;
+}
+
+/* Link button */
+.link-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    height: 42px;
+    border: 1px solid #ffffff;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+    background: transparent;
+    text-align: center;
+}
+
+
+
+/* Container for the text and image links */
+.text-and-images {
+    position: absolute;
+    top: 165px; /* Adjust the top position as needed */
+    left: 145px;
+    display: flex;
+    align-items: center;
+    gap: 19px; /* Gap between text and the first image */
+}
+
+/* Styling for the text */
+.info-text {
+    width: 417px;
+    height: 21px;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 21px;
+    text-align: left;
+    color: #ffffff; /* Adjust text color as needed */
+}
+
+/* Container for the image links */
+.image-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust spacing between the two images */
+.image-link + .image-link {
+    margin-left: -7px; /* Gap between the two images */
+}
+
+/* Styling for the images */
+.image-link img {
+    width: 110px;
+    height: 32px;
+}
+
+/* Layer 3 styling */
+
+/* Carousel container styling */
+.carousel-container {
+    position: relative;
+    width: 1312px;
+   
+    padding-left: 64px; /* Adds left padding */
+    padding-right: 64px; /* Adds right padding */
+}
+
+/* Main carousel styling */
+.carousel {
+    position: relative;
+    width: 1312px;
+    height: 405px;
+    overflow: hidden;
+    border-radius: 23px;
+    margin-top: 8px;
+}
+
+/* Carousel images container */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 405px;
+    object-fit: cover;
+}
+
+/* Carousel dots styling */
+.carousel-dots {
+    position: absolute;
+    bottom: 39px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+/* Layer 3 content container */
+.layer_3 {
+    width: 1312px; /* Full width within the container */
+    height: 405px;
+    background-size: contain; /* Scales the background image to fit within the div */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    display: flex;
+    position: relative;
+}
+
+/* Container for the text and button */
+.layer_3-content {
+    width: 443px;
+    height: 58;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50px; /* Adjust to align the content vertically */
+    left:55% ;
+    transform: translateX(-50%);
+    text-align: justify; /* Align text to the left */
+    z-index: 2; /* Ensure the content appears above other elements */
+}
+
+/* Header containing the first text and the button */
+.layer_3-header {
+    display: flex;
+    align-items: center;
+    justify-content: justify;
+    gap: 10px;
+    margin-bottom: 8px; /* Adjust to control spacing */
+}
+
+/* First line of text */
+.layer_3_text1 {
+    color: #FFFFFF;
+    font-size: 16px; /* Adjust as needed */
+    font-weight: 400;
+    line-height: 1.2; /* Adjust line height for better spacing */
+    margin: 0;
+}
+
+/* Second line of text */
+.layer_3_text2 {
+    color: #FFFFFF;
+    font-size: 16px; /* Adjust as needed */
+    font-weight: 400;
+    margin-top: -8px; /* Adjust to control spacing */
+}
+
+/* Button styling */
+.layer_3-button {
+    width: 153px;
+    height: 31px;
+    padding: 10px 20px; /* Adjust padding for better sizing */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 400;
+    border-radius: 25px;
+    background-color: #009046; /* Button background color */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.layer_3-button:hover {
+    background-color: #00753a; /* Darker shade for hover effect */
+}
+
+/* heading-mpc */
+
+.heading-mpc{
+    width: 1312px;
+    height: 52px;
+    padding-left: 64px;
+    padding-right: 64px;
+    font-size: 34.5px;
+    line-height: 52.11px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 41px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Cars container */
+.cars-container {
+    width: 1377px; /* Full width of the container */
+    height: 290px;
+    margin-left: 64px;
+    display: flex;
+    gap: 22px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to each car card */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    padding-bottom: 20px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.cars-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual car card */
+.cars {
+    flex: 0 0 auto; /* Prevent cards from stretching or shrinking */
+    width: 754px;
+    height: 290px;
+    border: 0.5px solid rgba(0, 0, 0, 0.129);
+    display: flex;
+    scroll-snap-align: start; /* Snap to start of the container when scrolling */
+}
+
+/* Image inside each car card */
+.cars img {
+    width: 360px;
+    height: 290px;
+}
+
+/* Car details section */
+.car-details {
+    width: 394px;
+    margin-left: 42px;
+    margin-right: 53px;
+}
+
+/* Car details list */
+.car-details .car-details-lists {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 34px;
+    margin-top: 40px;
+    width: 300px;
+    height: 17px;
+    align-items: center;
+}
+
+/* Individual car detail list item */
+.car-details li {
+    list-style: none;
+    font-size: 11px;
+}
+
+/* Icons inside car detail list items */
+.car-details li img {
+    width: 14px;
+    height: 14px;
+    padding-right: 2px;
+}
+
+/* Car price and booking button */
+.car-details .car-price-booking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 37px;
+    margin-bottom: 26px;
+}
+
+/* Heading inside car details */
+.car-details .headingP {
+    width: 248px;
+    height: 42px;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 3px;
+}
+
+/* Content paragraph inside car details */
+.car-details .contentP {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+/* Price paragraph inside car details */
+.car-details .priceP {
+    width: 152px;
+    height: 24px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+/* Booking button inside car details */
+.car-details .car-price-btn {
+    width: 98px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    background: #E21E26;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 4px;
+    letter-spacing: -2%;
+}
+
+.car-details-lists{
+    position: relative;
+    margin-bottom: 34px;
+    margin-top: 40px;
+    margin-left: -30px;
+    width:300px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+.car-details li{
+    
+    list-style: none;
+    font-size: 11px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    
+    
+    
+   
+}
+.car-details li img{
+    
+    width:14px;
+    height: 14px;
+    padding-right:2px;
+}
+
+
+
+/* ads-container */
+
+
+.ads-container{
+    position: relative;
+    display:flex ;
+    width:1234px;
+    height: 506px;
+    margin-left: 142px;
+    margin-top: 40px;
+}
+
+.ads-container .ads-details{
+    
+    width: 590px;
+    height: 506px;
+    
+}
+.ads-details .ads-heading{
+    width:550px;
+    height:100px;
+    font-weight: 400;
+    line-height: 51px;
+    font-size: 34px;
+    padding-top: 30px;
+}
+
+.ads-details .ads-input-fields{
+    display: flex;
+    gap:17px;
+}
+.ads-details .ads-input-fields input{
+    width: 223px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-left:16px;
+    background: #F8F8F8;
+    border: 0;
+}
+
+.ads-details .ads-paragraph{
+    width: 478px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 300;
+}
+
+.ads-details .ads-btn{
+    width: 464px;
+    height: 57px;
+    border-radius: 5px;
+    border: 0;
+    background: #E21E26;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 40px;
+
+}
+
+.ads-container .ads-details-2{
+    background: #E21E26;
+
+    width: 644px;
+    height: 506px;
+    display: flex;
+}
+
+
+.ads-details-2 .mobile-img-div {
+
+
+    width:231px;
+    height: 417px;
+    margin-top: 48px;
+    margin-left:71px; 
+}
+
+.mobile-div-2{
+    margin-top: 109px;
+    margin-left:19px ;
+    color: #FFFFFF;
+}
+.mobile-div-2 .ads-details-2-paragraph{
+    width: 233px;
+    height: 43px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21.5px;
+    padding-left: 5px;
+    
+}
+
+.mobile-div-2 .input-div{
+    width: 263px;
+    height: 45px;
+
+}
+.mobile-div-2 input{
+    width: 241px;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background: #F8F8F8;
+    text-align: justify;
+    padding-left: 22px;
+    outline: none;
+    
+}
+
+.mobile-div-2 button{
+    width: 144px;
+    height: 42px;
+    border-radius: 8px;
+    border: 0;
+    background: #000000;
+    color:  #FFFFFF;
+    margin-top: 23px;
+}
+
+.mobile-div-2 h6{
+    width: 63px;
+    height: 21px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 45px;;
+    
+}
+.mobile-div-2 .mobile-links{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 104px;
+    gap: 8px;
+}
+
+.mobile-div-2 a img{
+    width: 103px;
+    height: 30px;
+   
+}
+
+
+
+/* heading guildlines */
+
+.heading-guildlines{
+
+    width: 1312px;
+    height: 52px;
+    padding-left: 64px;
+    padding-right: 64px;
+    font-size: 34.5px;
+    line-height: 52.11px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* layout_5 */
+
+.layer_5{
+    width: 1244px;
+    height: 358px;
+    background-color: #ffffff;
+    margin-left:64px;
+    padding-right:64px;
+    gap: 8px;
+}
+
+.number-icons{
+    display: flex;
+    gap: 334px;
+    margin-left: 231px;
+    list-style: none;
+    
+}
+
+.number-icons li img{
+    width:64px;
+    height: 52px;
+    border-radius: 5px;
+
+}
+
+.layer_5 .guildlines-div{
+    width: 100%;
+    display: flex;
+    gap:50px;
+    margin-left: 91px;
+}
+
+.guildlines-div .guildlines{
+    width:348px;
+    height: 178px;
+    background-color: #ffffff;
+    border: 0.5px solid black;
+}
+
+.guildlines-div .guildlines{
+    
+    font-size: 14px;
+    text-align: center;
+   
+}
+
+.guildlines .guildline-img{
+    width: 38px;
+    height: 46px;
+    margin-top: 16px;
+    
+}
+.guildlines .guildlines-paragraph{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 16px;
+    opacity: 80%;
+    font-weight: 400;
+    line-height: 18.5px;
+    
+}
+
+
+/* layer_6 */
+
+.layer_6{
+    width: 1312px;
+    height: 325px;
+    background-color: #ffffff;
+    padding-left:64px;
+    padding-right:64px;
+
+}
+.layer_6 .layer-6-container{
+    width: auto;
+    height: 325px;
+    background: #000000;
+    color:#FFFFFF
+}
+
+.layer-6-container .layer-6-heading-div{
+    width: 1312px;
+     height: 51px;
+    display: flex;
+    justify-content: center;
+    
+    font-weight: 400;
+   font-size:34px;
+   line-height: 51px;
+    
+}
+
+.layer-6-container .layer-6-locations{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 136px;
+    gap: 112px;
+    list-style: none;
+}
+
+.layer-6-locations li{
+    display: flex;
+    gap: 17px;
+}
+.layer-6-locations li p{
+   font-size: 18px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   opacity: 80%;
+   line-height: 25px;
+}
+
+
+/* third main heading */
+
+.heading-questions{
+
+    width: 1312px;
+    height: 52px;
+    padding-left: 64px;
+    padding-right: 64px;
+    font-size: 34.5px;
+    line-height: 52.11px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 56px;
+    margin-bottom: 10px;
+}
+
+
+/* layer_7 */
+
+.faq-container {
+    max-width: 1312px;
+    margin: 0 auto;
+    padding-top: 69px;
+    background-color: #fff;
+    padding-left: 153px;
+    padding-right: 153px;
+    padding-bottom: 119px;
+    overflow: hidden;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.question {
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    display: none;
+    padding: 0 20px 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.open .answer {
+    display: block;
+}
+
+.open .icon {
+    transform: rotate(45deg);
+    color: #000000;
+}
+
+
+/* footer */
+
+
+.footer{
+   min-width: 1440px;
+    height: 303px;
+    margin: 0 auto;
+    padding-top: 40px;
+    color: #FFFFFF;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+
+
+.footer-container {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-bottom: 40px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.footer-logo {
+    max-width: 200px;
+    flex-shrink: 0;
+}
+
+.footer-logo img {
+    width: 57px;
+    height: 66px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p{
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+    width: 105px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 230px;
+}
+
+.footer-column {
+    margin: 0;
+}
+
+.footer-column ul {
+    display: grid;
+    grid-template-columns: repeat(4,120px);
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    
+}
+
+.footer-column ul li a ,.AlHabthoor-companyList ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.AlHabthoor-companyList{
+    height: 57px;
+}
+
+.AlHabthoor-companyList p{
+    font-size: 13px;
+    margin: 0;
+    color: #fff;
+}
+
+
+.AlHabthoor-companyList ul{
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 21px;
+}
+
+.AlHabthoor-companyList ul li{
+    font-size: 13px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    column-gap: 14px;
+}
+
+.social-media p{
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-media ul li {
+    margin: 0;
+}
+
+.social-media ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-media ul li a img {
+    width: 17px;
+    height: 17px;
+}
+
+.footer-certificates{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-certificates img {
+    width: 60px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #444;   
+}
+
+.footer-bottom p {
+    color: #fff;
+    
+    font-size: 14px;
+}
