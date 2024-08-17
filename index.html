@@ -5,26 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental Navbar</title>
+
+    <!-- stylesheets path -->
     <link rel="stylesheet" href="styles/index.css">
-    <!-- Add Remixicon for icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+
 </head>
 
 <body>
+
+    <!-- Desktop Nav bar start-->
+
+
     <nav class="custom-navbar">
+        <!-- Navbar container for logo and menu -->
         <div class="navbar-left">
+            <!-- Logo of the navbar -->
             <img src="img/Nav-logo.svg" alt="Car Rental Logo" class="logo">
         </div>
         <div class="navbar-right">
+            <!-- Social media icons section -->
             <div class="social-icons">
-                <a href="#"><img src="./img/navbar/facebook-nav.svg" alt=""></a>
-                <a href="#"><img src="./img/navbar/instagram-nav.svg" alt=""></a>
-                <a href="#"><img src="./img/navbar/twitter-nav.svg" alt=""></a>
-                <a href="#"><img src="./img/navbar/linkedIn-nav.svg" alt=""></a>
-
+                <!-- Links to social media profiles -->
+                <a href="#"><img src="./img/navbar/facebook-nav.svg" alt="Facebook"></a>
+                <a href="#"><img src="./img/navbar/instagram-nav.svg" alt="Instagram"></a>
+                <a href="#"><img src="./img/navbar/twitter-nav.svg" alt="Twitter"></a>
+                <a href="#"><img src="./img/navbar/linkedIn-nav.svg" alt="LinkedIn"></a>
             </div>
             <div class="nav-link">
+                <!-- Desktop navigation menu -->
                 <ul class="navbar-menu">
+                    <!-- Navigation links -->
                     <li><a href="#">About</a></li>
                     <li><a href="#">Offers</a></li>
                     <li><a href="#">Corporate</a></li>
@@ -32,336 +42,656 @@
                     <li><a href="#">Locations</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <div class="icon-container">
+                        <!-- Notification and profile links -->
                         <li><a href="#"><ion-icon name="notifications" class="notification-icon"></ion-icon><span
                                     class="notification_span">1</span></a></li>
                         <li><a href="#" class="profile-link"><span class="profile-icon">J</span>John Doe</a></li>
                     </div>
                 </ul>
+                <!-- Greeting message for desktop -->
                 <div class="greeting">
                     Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates
-                    inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers
+                    inclusive of VAT. T&C's apply | Follow us on Social Media for New Offers
                 </div>
             </div>
 
+            <!-- Greeting message for mobile view -->
+            <div class="greeting-mobile">
+                <p>Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates
+                    inclusive of VAT. T&C's apply | Follow us on Social Media for New Offers </p>
+            </div>
+        </div>
+
+        <!-- Mobile menu toggle button -->
+        <div class="mobile-toggle">
+            <span class="toggle-icon">&#9776;</span>
         </div>
     </nav>
 
+    <!-- Desktop Nav bar end -->
 
-    <!-- layer_2 -->
-    <div class="Layer_2">
-        
-        <div class="slide-in-button-1" id="slide-in-button">
-            <button class="slide-in-contents">
-                <img class="contact-img" src="./img/layer2/contact-icon.svg" alt=""><p>8562352452</p>
-            </button>
+    <!-- Mobile nav menu start-->
+
+    <div id="mobileMenu" class="mobile-nav">
+        <!-- Close button for mobile menu -->
+        <span class="close-icon-span"><img class="close-icon" src="./img/nav-close.svg" alt="Close"></span>
+        <ul class="nav-links">
+            <!-- Mobile navigation links -->
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Corporate</a></li>
+            <li><a href="#">Personal</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <!-- Login/Signup button for mobile menu -->
+        <div class="login-signup">
+            <button class="login-btn">Log In/Sign Up</button>
         </div>
-    
-        <div class="slide-in-button-2" id="slide-in-button">
-            <button class="slide-in-contents">
-                <img class="customer-img" src="./img/layer2/customer-servise-icon.svg" alt=""><p>8562352452</p>
-            </button>
-        </div>
+    </div>
 
-        <img src="img/Layer_2.svg" alt="Background Image">
+    <!-- Mobile nav menu end-->
 
-        <div class="vehicle-options-container">
-            <ul class="vehicle-menu">
-                <li><a href="#" class="vehicle-link" onclick="activateLink(this)">Same as pick-up<span></span></a></li>
-                <li><a href="#" class="vehicle-link" onclick="activateLink(this)">Different drop-off<span></span></a>
-                </li>
-                <li>
-                    <div class="custom-dropdown-container">
-                        <select class="vehicle-dropdown">
-                            <option>Select vehicle type</option>
-                            <option>Option 2</option>
-                        </select>
-                        <div class="custom-dropdown-arrow">
-                            <img src="img/arrow-white.svg" alt="Dropdown Arrow">
-                        </div>
-                    </div>
-                </li>
 
-            </ul>
-        </div>
 
-        <div class="content">
-            <div class="dropdown-container">
-                <div class="dropdown-icon">
-                    <img src="img/Location.svg" alt="Location Icon">
+
+    <!-- Body Content start-->
+
+
+    <!-- Hero section start-->
+    <section class="hero">
+        <!-- Quick pickup section -->
+        <div class="quick-pickup">
+            <!-- Button for contact with slide-in effect -->
+            <div class="slide-in-button-1" id="slide-in-button">
+                <button class="slide-in-contents">
+                    <img class="contact-img" src="./img/layer2/contact-icon.svg" alt="Contact">
+                    <p>8562352452</p>
+                </button>
+            </div>
+
+            <!-- Button for customer service with slide-in effect -->
+            <div class="slide-in-button-2" id="slide-in-button">
+                <button class="slide-in-contents">
+                    <img class="customer-img" src="./img/layer2/customer-servise-icon.svg" alt="Customer Service">
+                    <p>8562352452</p>
+                </button>
+            </div>
+
+            <!-- Pickup options and vehicle selector -->
+            <div class="pickup-options">
+                <!-- Options for pickup and drop-off -->
+                <div class="options"><button class="pickup-link">Same as Pick-Up <span class="line"></span></button>
                 </div>
-                <select class="dropdown">
-                    <option>Al Quoz</option>
-                    <option>Option 2</option>
+                <div class="options"><button class="pickup-link">Different Drop-Off <span class="line"></span></button>
+                </div>
+                <!-- Dropdown for vehicle type selection -->
+                <select name="vehicle" class="vehicle-type">
+                    <option value="" disabled selected style="display: none;">Select vehicle type</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="suv">SUV</option>
                 </select>
-                <div class="dropdown-arrow">
-                    <img src="img/arrow.svg" alt="Dropdown Arrow">
+            </div>
+
+            <!-- Additional details section -->
+            <div class="additional-details">
+                <!-- Location selector with map pin icon -->
+                <div class="location">
+                    <img src="./img/location.svg" alt="Location" class="map-pin">
+                    <select name="place" class="location-list">
+                        <option value="al-quoz">Al Quoz</option>
+                        <option value="al-barsha"><i class="ri-map-pin-line"></i>Al Barsha</option>
+                        <option value="al-satwa"><i class="ri-map-pin-line"></i>Al Satwa</option>
+                    </select>
+                </div>
+
+                <!-- Pickup time selector with calendar icon -->
+                <div class="pickup-time" id="dateTimeSelector">
+                    <div class="icon">
+                        <img src="./img/date.svg" alt="Calendar Icon" class="calender-icon">
+                    </div>
+                    <div class="date-time">
+                        <span class="date" id="selectedDate">Loading...</span>
+                        <span class="time" id="selectedTime">Loading...</span>
+                    </div>
+                    <!-- Date and time picker -->
+                    <div class="date-time-picker" id="dateTimePicker" style="display: none;">
+                        <input type="date" id="dateInput">
+                        <input type="time" id="timeInput">
+                        <button id="setDateTime">Set</button>
+                    </div>
+                </div>
+
+                <!-- Arrival time selector with calendar icon -->
+                <div class="pickup-time" id="arrivalDateTimeSelector">
+                    <div class="icon">
+                        <img src="./img/date.svg" alt="Calendar Icon" class="calender-icon">
+                    </div>
+                    <div class="date-time">
+                        <span class="date" id="selectedArrivalDate">Loading...</span>
+                        <span class="time" id="selectedArrivalTime">Loading...</span>
+                    </div>
+                    <!-- Arrival date and time picker -->
+                    <div class="arrival-date-time-picker" id="arrivalDateTimePicker" style="display: none;">
+                        <input type="date" id="dateInput">
+                        <input type="time" id="timeInput">
+                        <button id="setDateTime">Set</button>
+                    </div>
+                </div>
+
+                <!-- Search button -->
+                <div class="search-button">
+                    <button>
+                        <img src="./img/search_icon.svg" alt="Search">
+                    </button>
+                </div>
+
+                <!-- Vertical line separator -->
+                <span class="vertical-line"></span>
+
+                <!-- Quick Book button -->
+                <div class="quick-book">
+                    <button>Quick Book</button>
                 </div>
             </div>
 
-            <div class="date-container">
-                <div class="date-icon">
-                    <img src="img/date.svg" alt="Date Icon">
+            <!-- App download links -->
+            <div class="download-links">
+                <p class="download-description">
+                    Download our App for easy accessibility anytime, anywhere!
+                </p>
+                <div class="applinks">
+                    <a href="">
+                        <img src="./img/apple-store.svg" alt="Apple Store">
+                    </a>
+                    <a href="">
+                        <img src="./img/google-play.svg" alt="Google Play">
+                    </a>
                 </div>
-                <input type="text" class="date-field" placeholder="dd/mm/yy">
-                <div class="date-time-text">
-                    <span>00:00 AM</span>
-                </div>
-            </div>
-
-            <div class="date-container">
-                <div class="date-icon">
-                    <img src="img/date.svg" alt="Date Icon">
-                </div>
-                <input type="text" class="date-field" placeholder="dd/mm/yy">
-                <div class="date-time-text">
-                    <span>00:00 AM</span>
-                </div>
-            </div>
-
-            <div class="searchButton">
-                <button><img src="img/search_icon.svg" alt="Search Icon"></button>
-            </div>
-            <div class="vertical-line">
-                <img src="img/Line.svg" alt="Vertical Line">
-            </div>
-            <div class="link-button">
-                <a href="#">Quick Book</a>
             </div>
         </div>
+    </section>
 
-        <!-- New text and image links -->
-        <div class="text-and-images">
-            <span class="info-text">Download our App for easy accessibility anytime, anywhere!</span>
-            <div class="image-link">
-                <a href="#">
-                    <img src="img/apple-store.svg" alt="Image 1">
-                </a>
+    <!-- Mobile booking section -->
+    <div class="mobile-booking-container">
+        <!-- Buttons for booking options -->
+        <div class="mobile-booking-buttons">
+            <button id="bookCarBtn" class="mobile-booking-button">Book a Car</button>
+            <button id="quickBookBtn" class="mobile-booking-button outline">Quick Book</button>
+        </div>
+
+        <!-- Selector container for mobile booking -->
+        <div id="tripOptions" class="trip-options-container" style="display: none;">
+            <!-- Selector options for pickup and drop-off -->
+            <div class="selector-options">
+                <button class="selector-option" id="samePickUpBtn">Same as Pick-Up <span class="line"></span></button>
+                <button class="selector-option" id="differentDropOffBtn">Different Drop-Off<span
+                        class="line"></span></button>
+                <select class="selector-option" id="vehicleTypeSelect">
+                    <option value="" disabled selected>Vehicle Type</option>
+                    <option value="car">Car</option>
+                    <option value="bike">Bike</option>
+                </select>
             </div>
-            <div class="image-link">
-                <a href="#">
-                    <img src="img/google-play.svg" alt="Image 2">
-                </a>
+
+            <!-- Dropdown options for pick-up and drop-off locations -->
+            <div id="pickUpOptions" class="dropdown-options" style="display: none;">
+                <select>
+                    <option value="location1">Pick-Up Location</option>
+                    <option value="location2">Location 2</option>
+                </select>
+                <select>
+                    <option value="location3">Drop-Off Location</option>
+                    <option value="location4">Location 4</option>
+                </select>
+            </div>
+
+            <!-- Date and time selectors for pick-up and drop-off -->
+            <div id="dropOffOptions" class="dropdown-options" style="display: none;">
+                <label>Pick-Up Date & Time</label>
+                <input type="datetime-local" />
+                <label>Drop-Off Date & Time</label>
+                <input type="datetime-local" />
+            </div>
+
+            <!-- Search button for mobile booking -->
+            <div class="search-button-div">
+                <button class="search-button">Search</button>
             </div>
         </div>
     </div>
 
 
+    <!-- Hero section end-->
+
+
+
+    <!-- Carousel container starts -->
     <div class="carousel-container">
         <div class="carousel">
-            <div class="layer_3 carousel-images">
-                <!-- Images will be injected here by JavaScript -->
+            <!-- Container for carousel images -->
+            <div class="carousel-images">
+                <!-- Images will be dynamically injected here by JavaScript -->
             </div>
-            <div class="carousel-text layer_3-content">
-                <div class="layer_3-header">
-                    <p class="layer_3_text1" id="carousel-text1">Your Text Here</p>
-                    <button class="layer_3-button" id="carousel-button" onclick="addlink()" href="">Your Button</button>
+
+            <!-- Container for carousel text -->
+            <div class="carousel-text">
+                <div class="carousel-text-header">
+                    <p class="text1" id="carousel-text1"></p>
+                    <button class="carousel-button" id="carousel-button" onclick="addlink()"></button>
                 </div>
-                <p class="layer_3_text2" id="carousel-text2">Additional Text Here</p>
+
+                <!-- Paragraph section of the carousel text -->
+                <div class="carousel-text-paragraph">
+                    <p class="text2" id="carousel-text2"></p>
+                </div>
             </div>
+
+            <!-- Container for carousel navigation dots -->
             <div class="carousel-dots">
-                <!-- Dots will be injected here by JavaScript -->
+                <!-- Dots will be dynamically injected here by JavaScript -->
             </div>
         </div>
     </div>
+    <!-- Carousel container ends -->
 
 
-    <!-- most popular cars -->
+
+
+    <!-- most popular cars heading starts-->
 
     <div class="heading-mpc">
         <p>
             Most popular cars
         </p>
     </div>
+    <!-- most popular cars heading end-->
 
 
 
-<!-- Cars Container -->
-<div class="cars-container" id="cars-container">
-    <!-- Cars will be dynamically inserted here -->
-</div>
-
-
-    <!-- layer_4 -->
-
-    <div class="ads-container">
-
-        <div class="ads-details">
-            <p class="ads-heading">Subscribe here for exclusive offers and updates!</p>
-
-            <div class="ads-input-fields">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-            </div>
-            <p class="ads-paragraph">Don't miss out! enter your email and your name, then hit subscribe to unlock a
-                world of special offers and details.</p>
-
-            <button class="ads-btn">Subscribe</button>
+    <!-- cars booking container starts -->
+    <div class="cars-main-container">
+        <div class="cars-container" id="cars-container">
+            <!-- Cars will be dynamically inserted here -->
         </div>
+    </div>
+    <!-- cars booking container end -->
 
 
-        <div class="ads-details-2">
-            <div class="mobile-img-div">
-                <img src="./img/mobile.svg" alt="">
+
+
+
+    <!-- subscription ads container starts -->
+
+
+    <!-- Subscription and app promotion section for Desktop -->
+    <div class="ads-wrapper">
+        <div class="ads-container">
+            <!-- Subscription details -->
+            <div class="ads-details">
+                <h2 class="ads-heading">Subscribe here for exclusive offers and updates!</h2>
+                <!-- Input fields for name and email -->
+                <div class="ads-input-fields">
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                </div>
+                <p class="ads-paragraph">
+                    Please Select The Ways You Would Like To Hear From Diamondlease, And Confirm That You're Happy For
+                    Us To Store Your Data In Line With Our Privacy Policy.
+                </p>
+                <button class="ads-btn">Subscribe</button>
             </div>
-            <div class="mobile-div-2">
-                <p class="ads-details-2-paragraph">Enter your number and receive a direct link to download the app</p>
-                <div class="input-div">
-                    <input type="text" placeholder="Enter Phone Number">
+
+            <!-- App promotion details -->
+            <div class="ads-details-2">
+                <div class="mobile-img-div">
+                    <img src="./img/mobile.svg" alt="App preview" class="app-image" />
                 </div>
-                <div>
-                    <button class="ads-btn-2">Get the link</button>
+                <div class="mobile-div-2">
+                    <h6>Get it on</h6>
+                    <!-- App store links -->
+                    <div class="mobile-links">
+                        <a href="#"><img src="./img/apple-store-transparent.svg" alt="App Store" /></a>
+                        <a href="#"><img src="./img/google-play-transparent.svg" alt="Google Play" /></a>
+                    </div>
+                    <!-- Input for phone number and button to receive the app link -->
+                    <div class="input-div">
+                        <input type="tel" placeholder="Enter Phone Number" />
+                    </div>
+                    <button>Get the link</button>
                 </div>
-                <h6>Get in on</h6>
-                <div class="mobile-links">
-
-                    <img src="img/apple-store-transparent.svg" alt="Image 1">
-
-                    <img src="img/google-play-transparent.svg" alt="Image 2">
-
-                </div>
-
             </div>
         </div>
     </div>
 
-      <!-- second main heading -->
+    <!-- Mobile version of the subscription and app promotion section -->
+    <div class="subscription-container">
+        <h2>Subscribe here for exclusive offers and updates!</h2>
+        <!-- Subscription form -->
+        <form class="subscription-form">
+            <input type="text" placeholder="Name" class="input-field" />
+            <input type="email" placeholder="Email" class="input-field" />
+            <p class="privacy-text">
+                Please Select The Ways You Would Like To Hear From Diamondlease, And Confirm That You're Happy For Us To
+                Store Your Data In Line With Our Privacy Policy.
+            </p>
+            <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
 
-      <div class="heading-guildlines">
+        <!-- App promotion section -->
+        <div class="app-promo-container">
+            <div class="app-stores">
+                <div class="img-phone-div">
+                    <img src="./img/mobile.svg" alt="App preview" class="app-image" />
+                </div>
+                <div class="app-stores-get-it-on">
+                    <p class="get-it-on">Get it on</p>
+                    <!-- App store badges -->
+                    <div class="get-link-img-div">
+                        <img src="./img/apple-store-transparent.svg" alt="App Store" class="store-badge" />
+                        <img src="./img/google-play-transparent.svg" alt="Google Play" class="store-badge" />
+                    </div>
+                    <p class="promo-text">
+                        Enter your number and receive a direct link to download the app
+                    </p>
+                </div>
+            </div>
+            <!-- Input for phone number and button to receive the app link -->
+            <div class="input-tag-div">
+                <input type="tel" placeholder="Enter Phone Number" class="input-field" />
+                <button class="get-link-button">Get the link</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- subscription ads container end -->
+
+
+
+    <!-- guildlines heading starts-->
+
+    <div class="heading-guildlines">
         <p>
             Rent/Lease In three easy steps
         </p>
     </div>
+    <!-- guildlines heading end-->
 
 
-    <!-- layer_5 -->
+
+
+    <!-- guide section layer-5 starts-->
 
     <div class="layer_5">
-        <div class="number-icons">
-            <li><img src="./img/number1.svg" alt=""></li>
-            <li><img src="./img/number2.svg" alt=""></li>
-            <li><img src="./img/number3.svg" alt=""></li>
-        </div>
-        <div class="guildlines-div">
-            <div class="guildlines">
-                <img src="./img/guildlines-logo-1.svg" alt="" class="guildline-img">
-                <p class="guildlines-paragraph">Select the location. Browse through our available options and find the perfect car to suit your needs</p>
+        <div class="guildlines-main-div">
+            <!-- First Step -->
+            <div class="step-container">
+                <!-- Step number icon -->
+                <div class="number-icon">
+                    <img src="./img/number1.svg" alt="">
+                </div>
+                <!-- Step details -->
+                <div class="guildline">
+                    <img src="./img/guildlines-logo-1.svg" alt="" class="guildline-img">
+                    <p class="guildlines-paragraph">Select the location. Browse through our available options and find
+                        the perfect car to suit your needs.</p>
+                </div>
             </div>
-            <div class="guildlines">
-                <img src="./img/guildlines-logo-2.svg" alt="" class="guildline-img">
-                <p class="guildlines-paragraph">Choose your desired Pick-Up date and time.</p>
+
+            <!-- Second Step -->
+            <div class="step-container">
+                <!-- Step number icon -->
+                <div class="number-icon">
+                    <img src="./img/number2.svg" alt="">
+                </div>
+                <!-- Step details -->
+                <div class="guildline">
+                    <img src="./img/guildlines-logo-2.svg" alt="" class="guildline-img">
+                    <p class="guildlines-paragraph">Choose your desired Pick-Up date and time.</p>
+                </div>
             </div>
-            <div class="guildlines">
-                <img src="./img/guildlines-logo-3.svg" alt="" class="guildline-img">
-                <p class="guildlines-paragraph">Make payment and book the car. Select an option to either have the car delivered to your location or pick it up directly from us.</p>
+
+            <!-- Third Step -->
+            <div class="step-container">
+                <!-- Step number icon -->
+                <div class="number-icon">
+                    <img src="./img/number3.svg" alt="">
+                </div>
+                <!-- Step details -->
+                <div class="guildline">
+                    <img src="./img/guildlines-logo-3.svg" alt="" class="guildline-img">
+                    <p class="guildlines-paragraph">Make payment and book the car. Select an option to either have the
+                        car delivered to your location or pick it up directly from us.</p>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <!-- layer_6 -->
+    <!-- guide secion layer-5 end -->
+
+
+
+
+
+
+
+    <!-- Locations section starts-->
 
     <div class="layer_6">
         <div class="layer-6-container">
+            <!-- Heading for the locations section -->
             <div class="layer-6-heading-div">
                 <p class="layer-6-heading">Locations</p>
             </div>
+            <!-- List of locations -->
             <div class="layer-6-locations">
-                <li><img src="./img/layer-6-location.svg" alt=""><p>Dubai</p></li>
-                <li><img src="./img/layer-6-location.svg" alt=""><p>Abu Dhabi</p></li>
-                <li><img src="./img/layer-6-location.svg" alt=""><p>Sharjah</p></li>
-                <li><img src="./img/layer-6-location.svg" alt=""><p>Fujairah</p></li>
-                <li><img src="./img/layer-6-location.svg" alt=""><p>Ras Al Khaimah</p></li>
-   
+                <!-- Location item with icon and name -->
+                <li>
+                    <img src="./img/layer-6-location.svg" alt="">
+                    <p>Dubai</p>
+                </li>
+                <!-- Vertical line separator -->
+                <span class="vertical-line-layer-6"></span>
+
+                <li>
+                    <img src="./img/layer-6-location.svg" alt="">
+                    <p>Abu Dhabi</p>
+                </li>
+
+                <span class="vertical-line-layer-6"></span>
+
+                <li>
+                    <img src="./img/layer-6-location.svg" alt="">
+                    <p>Sharjah</p>
+                </li>
+
+                <span class="vertical-line-layer-6"></span>
+
+                <li>
+                    <img src="./img/layer-6-location.svg" alt="">
+                    <p>Fujairah</p>
+                </li>
+
+                <span class="vertical-line-layer-6"></span>
+
+                <li>
+                    <img src="./img/layer-6-location.svg" alt="">
+                    <p>Ras Al Khaimah</p>
+                </li>
             </div>
         </div>
     </div>
 
-      <!-- Third main heading -->
+    <!-- Locations section starts-->
 
-      <div class="heading-questions">
+
+
+    <!-- faq heading starts -->
+
+    <div class="heading-questions">
         <p>
             Frequently asked questions
         </p>
     </div>
 
-
- <!-- Layer 7 -->
- <div class="faq-container">
-    <!-- FAQ items will be dynamically added here by JavaScript -->
-</div>
+    <!-- faq heading end -->
 
 
-<!-- layer 8 footer-->
 
-<footer class="footer">
+    <!-- faq container starts -->
 
-    <div class="footer-container">
-        <div class="footer-logo">
-            <!-- Add your logo image here -->
-            <img src="./img/footer/footer-icon.svg" alt="Company Logo">
-            <p>Member of the Al Habtoor Group</p>
-        </div>
-        <div class="footer-links">
-            <div class="footer-column">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Term & Conditions</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact US</a></li>
-                    <li><a href="#">Service Request</a></li>
-                    
-                </ul>
-            </div>
-            
-            <div class="AlHabthoor-companyList">
-                <p>Al habtoor company List</p>
-                <ul>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Publishing</a></li>
-                    <li><a href="#">Hospitality</a></li>
-                    <li><a href="#">Real Estate</a></li>
-                    <li><a href="#">Automotive</a></li>
-                    <li><a href="#">Vehicle Leasing</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-right">
-            <div class="social-media">
-                <p>FOLLOW US ON</p>
-                <ul>
-                    <li><a href="#"><img src="./img/footer/facebook.svg" alt=""></i></a></li>
-                    <li><a href="#"><img src="./img/footer/twitter.svg" alt=""></i></a></li>
-                    <li><a href="#"><img src="./img/footer/instagram.svg" alt=""></i></a></li>
-                    <li><a href="#"><img src="./img/footer/linkedIn.svg" alt=""></a></li>
-                    <li><a href="#"><img src="./img/footer/youtube.svg" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="footer-certificates">
-                <!-- Add your certificate images here -->
-                <img src="./img/footer/certificate1.svg" alt="Certificate 1">
-                <img src="./img/footer/certificate2.svg" alt="Certificate 2">
-            </div>
+    <div class="faq-main-container">
+        <div class="faq-container">
+            <!-- FAQ items will be dynamically added here by JavaScript -->
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2018 Diamondlease LLC - All Rights Reserved.</p>
-    </div>
 
-
-</footer>
+    <!-- faq container end -->
 
 
 
+
+    <!-- Desktop Footer starts-->
+    <footer class="footer Desktop-footer">
+
+        <div class="footer-container">
+            <!-- Logo and company affiliation -->
+            <div class="footer-logo">
+                <img src="./img/footer/footer-icon.svg" alt="Company Logo">
+                <p>Member of the Al Habtoor Group</p>
+            </div>
+            <!-- Links and information columns -->
+            <div class="footer-links">
+                <!-- Main navigation links -->
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">Service Request</a></li>
+                    </ul>
+                </div>
+
+                <!-- Al Habtoor Group company list -->
+                <div class="AlHabthoor-companyList">
+                    <p>Al Habtoor Company List</p>
+                    <ul>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Publishing</a></li>
+                        <li><a href="#">Hospitality</a></li>
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Automotive</a></li>
+                        <li><a href="#">Vehicle Leasing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Social media links and certificates -->
+            <div class="footer-right">
+                <div class="social-media">
+                    <p>FOLLOW US ON</p>
+                    <div class="social-ul">
+                        <ul>
+                            <li><a href="#"><img src="./img/footer/facebook.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./img/footer/twitter.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./img/footer/instagram.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./img/footer/linkedIn.svg" alt=""></a></li>
+                            <li><a href="#"><img src="./img/footer/youtube.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-certificates">
+                    <img src="./img/footer/certificate1.svg" alt="Certificate 1">
+                    <img src="./img/footer/certificate2.svg" alt="Certificate 2">
+                </div>
+            </div>
+        </div>
+        <!-- Footer bottom text -->
+        <div class="footer-bottom">
+            <p>&copy; 2018 Diamondlease LLC - All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- Desktop footer end -->
+
+    <!-- Mobile Footer starts -->
+    <footer class="mobile-footer-main-div">
+
+        <div class="mobile-footer">
+            <!-- Mobile footer top with logo and social media icons -->
+            <div class="mobile-footer-top">
+                <div class="mobile-footer-logo-div">
+                    <img src="./img/mobile-footer-logo.svg" alt="Al Habtoor Group Logo" class="mobile-logo" />
+                </div>
+                <div class="mobile-footer-icons">
+                    <a href="#"><img src="./img/footer/facebook-black.svg" alt="Facebook"
+                            class="mobile-footer-icon" /></a>
+                    <a href="#"><img src="./img/footer/twitter-black.svg" alt="Twitter"
+                            class="mobile-footer-icon" /></a>
+                    <a href="#"><img src="./img/footer/instagram-black.svg" alt="Instagram"
+                            class="mobile-footer-icon" /></a>
+                    <a href="#"><img src="./img/footer/linkedIn-black.svg" alt="LinkedIn"
+                            class="mobile-footer-icon" /></a>
+                    <a href="#"><img src="./img/footer/youtube-black.svg" alt="YouTube"
+                            class="mobile-footer-icon" /></a>
+                </div>
+            </div>
+            <!-- Mobile footer links -->
+            <div class="mobile-footer-links">
+                <a href="#">Home</a>
+                <a href="#">Offers</a>
+                <a href="#">Career</a>
+                <a href="#">About Us</a>
+                <a href="#">Locations</a>
+                <a href="#">FAQ</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Service Request</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Services</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- Mobile footer additional sections -->
+        <div class="mobile-footer-section-2">
+            <h2 class="mobile-footer-title">Al Habtoor Companies</h2>
+            <div class="mobile-footer-services">
+                <a href="#">Hospitality</a>
+                <a href="#">Real Estate</a>
+                <a href="#">Publishing</a>
+                <a href="#">Automotive</a>
+                <a href="#">Vehicle Leasing</a>
+            </div>
+            <div class="mobile-footer-seal">
+                <img src="./img/footer/certificate-white.svg" alt="Secure GlobalSign Seal" class="mobile-seal-icon" />
+            </div>
+            <!-- Footer bottom text -->
+            <div class="mobile-footer-bottom">
+                <p>© 2023 Car Rental LLC - All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- mobile footer end -->
+
+
+
+    <!-- scripts path -->
     <script src="scripts/index.js" defer></script>
-
+    <!-- ion icon cdn  -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
