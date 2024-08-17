@@ -1839,10 +1839,14 @@ option {
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding:0 ;
         gap: 10px;
         /* Space between items */
-        margin-left: -10px;
+        width: 100%;
     }
+
 
     .download-links p {
         width: 251px;
@@ -2058,7 +2062,7 @@ option {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
     }
 
