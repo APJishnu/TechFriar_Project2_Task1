@@ -1,35 +1,97 @@
 // scripts for date and time for layer 2
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Pickup time elements
+  const dateTimeSelector = document.getElementById('dateTimeSelector');
+  const selectedDate = document.getElementById('selectedDate');
+  const selectedTime = document.getElementById('selectedTime');
+  const dateTimePicker = document.getElementById('dateTimePicker');
+  const dateInput = document.querySelector('#dateTimePicker #dateInput');
+  const timeInput = document.querySelector('#dateTimePicker #timeInput');
+  const setDateTimeButton = document.getElementById('setDateTime');
 
-function updateDateTime() {
-  const dateFields = document.querySelectorAll('.date-field');
-  const timeTexts = document.querySelectorAll('.date-time-text span');
+  // Arrival time elements
+  const arrivalDateTimeSelector = document.getElementById('arrivalDateTimeSelector');
+  const selectedArrivalDate = document.getElementById('selectedArrivalDate');
+  const selectedArrivalTime = document.getElementById('selectedArrivalTime');
+  const arrivalDateTimePicker = document.getElementById('arrivalDateTimePicker');
+  const arrivalDateInput = document.querySelector('#arrivalDateTimePicker #dateInput');
+  const arrivalTimeInput = document.querySelector('#arrivalDateTimePicker #timeInput');
+  const setArrivalDateTimeButton = document.querySelector('#arrivalDateTimePicker #setDateTime');
 
-  const now = new Date();
+  // Function to get current date and time in YYYY-MM-DD and HH:MM format
+  function getCurrentDateTime() {
+      const now = new Date();
+      const currentDate = now.toISOString().split('T')[0]; // Get YYYY-MM-DD format
+      const currentTime = now.toTimeString().split(' ')[0].slice(0, 5); // Get HH:MM format
+      return { currentDate, currentTime };
+  }
 
-  // Format date as dd/mm/yy
-  const day = String(now.getDate()).padStart(2, '0');
-  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-  const year = String(now.getFullYear()).slice(-2); // Get last two digits of the year
-  const formattedDate = `${day}/${month}/${year}`;
+  // Set initial date and time to current
+  const { currentDate, currentTime } = getCurrentDateTime();
+  selectedDate.textContent = currentDate;
+  selectedTime.textContent = currentTime;
+  selectedArrivalDate.textContent = currentDate;
+  selectedArrivalTime.textContent = currentTime;
 
-  // Format time as hh:mm AM/PM
-  let hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12; // Convert to 12-hour format
-  const formattedTime = `${String(hours).padStart(2, '0')}:${minutes} ${ampm}`;
+  // Set the default values in the input fields as well
+  dateInput.value = currentDate;
+  timeInput.value = currentTime;
+  arrivalDateInput.value = currentDate;
+  arrivalTimeInput.value = currentTime;
 
-  // Set the formatted date and time for all fields
-  dateFields.forEach(field => field.value = formattedDate);
-  timeTexts.forEach(text => text.innerHTML = formattedTime);
-}
+  // Toggle pickup date-time picker
+  dateTimeSelector.addEventListener('click', function () {
+      dateTimePicker.style.display = dateTimePicker.style.display === 'none' ? 'block' : 'none';
+  });
 
-// Run the function to update date and time
-updateDateTime();
+  // Toggle arrival date-time picker
+  arrivalDateTimeSelector.addEventListener('click', function () {
+      arrivalDateTimePicker.style.display = arrivalDateTimePicker.style.display === 'none' ? 'block' : 'none';
+  });
 
-// Optionally, update the time every minute
-setInterval(updateDateTime, 60000);
+  // Set pickup date and time
+  setDateTimeButton.addEventListener('click', function () {
+      const selectedDateValue = dateInput.value;
+      const selectedTimeValue = timeInput.value;
+
+      if (selectedDateValue && selectedTimeValue) {
+          selectedDate.textContent = selectedDateValue;
+          selectedTime.textContent = selectedTimeValue;
+          dateTimePicker.style.display = 'none'; // Hide the picker after selection
+      } else {
+          alert("Please select both date and time.");
+      }
+  });
+
+  // Set arrival date and time
+  setArrivalDateTimeButton.addEventListener('click', function () {
+      const selectedArrivalDateValue = arrivalDateInput.value;
+      const selectedArrivalTimeValue = arrivalTimeInput.value;
+
+      if (selectedArrivalDateValue && selectedArrivalTimeValue) {
+          selectedArrivalDate.textContent = selectedArrivalDateValue;
+          selectedArrivalTime.textContent = selectedArrivalTimeValue;
+          arrivalDateTimePicker.style.display = 'none'; // Hide the picker after selection
+      } else {
+          alert("Please select both date and time.");
+      }
+  });
+
+  // Close the date-time picker when clicking outside
+  document.addEventListener('click', function (event) {
+      const isClickInsidePickup = dateTimeSelector.contains(event.target);
+      const isClickInsideArrival = arrivalDateTimeSelector.contains(event.target);
+
+      if (!isClickInsidePickup) {
+          dateTimePicker.style.display = 'none';
+      }
+
+      if (!isClickInsideArrival) {
+          arrivalDateTimePicker.style.display = 'none';
+      }
+  });
+});
 
 
 // ***********************************************************************************************************************

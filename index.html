@@ -106,7 +106,7 @@
             <div class="slide-in-button-1" id="slide-in-button">
                 <button class="slide-in-contents">
                     <img class="contact-img" src="./img/layer2/contact-icon.svg" alt="Contact">
-                    <p>8562352452</p>
+                    <p>8714804072</p>
                 </button>
             </div>
 
@@ -114,7 +114,7 @@
             <div class="slide-in-button-2" id="slide-in-button">
                 <button class="slide-in-contents">
                     <img class="customer-img" src="./img/layer2/customer-servise-icon.svg" alt="Customer Service">
-                    <p>8562352452</p>
+                    <p>8714804072</p>
                 </button>
             </div>
 
@@ -138,19 +138,18 @@
             <div class="additional-details">
                 <!-- Location selector with map pin icon -->
                 <div class="location">
-                    <img src="./img/location.svg" alt="Location" class="map-pin">
+                    
                     <select name="place" class="location-list">
                         <option value="al-quoz">Al Quoz</option>
-                        <option value="al-barsha"><i class="ri-map-pin-line"></i>Al Barsha</option>
-                        <option value="al-satwa"><i class="ri-map-pin-line"></i>Al Satwa</option>
+                        <option value="al-barsha">Al Barsha</option>
+                        <option value="al-satwa">Al Satwa</option>
                     </select>
+                    <img src="./img/arrow.svg" alt="Location" class="map-pin">
                 </div>
 
                 <!-- Pickup time selector with calendar icon -->
                 <div class="pickup-time" id="dateTimeSelector">
-                    <div class="icon">
-                        <img src="./img/date.svg" alt="Calendar Icon" class="calender-icon">
-                    </div>
+              
                     <div class="date-time">
                         <span class="date" id="selectedDate">Loading...</span>
                         <span class="time" id="selectedTime">Loading...</span>
@@ -165,9 +164,7 @@
 
                 <!-- Arrival time selector with calendar icon -->
                 <div class="pickup-time" id="arrivalDateTimeSelector">
-                    <div class="icon">
-                        <img src="./img/date.svg" alt="Calendar Icon" class="calender-icon">
-                    </div>
+        
                     <div class="date-time">
                         <span class="date" id="selectedArrivalDate">Loading...</span>
                         <span class="time" id="selectedArrivalTime">Loading...</span>
@@ -241,17 +238,21 @@
                     <option value="location1">Pick-Up Location</option>
                     <option value="location2">Location 2</option>
                 </select>
-                <select>
-                    <option value="location3">Drop-Off Location</option>
-                    <option value="location4">Location 4</option>
-                </select>
+                <input type="datetime-local" />
+                <input type="datetime-local" />
             </div>
 
             <!-- Date and time selectors for pick-up and drop-off -->
             <div id="dropOffOptions" class="dropdown-options" style="display: none;">
-                <label>Pick-Up Date & Time</label>
+                <select>
+                    <option value="location1">Pick-Up Location</option>
+                    <option value="location2">Location 2</option>
+                </select>
+                <select>
+                    <option value="location3">Drop-Off Location</option>
+                    <option value="location4">Location 4</option>
+                </select>
                 <input type="datetime-local" />
-                <label>Drop-Off Date & Time</label>
                 <input type="datetime-local" />
             </div>
 
@@ -349,17 +350,21 @@
                     <img src="./img/mobile.svg" alt="App preview" class="app-image" />
                 </div>
                 <div class="mobile-div-2">
+                    <p class="paragraph1-mobile-div-2">Enter your number and receive 
+                        a direct link to download the app</p>
+                    <!-- Input for phone number and button to receive the app link -->
+                    <div class="input-div">
+                        <input type="tel" placeholder="Enter Phone Number" />
+                    </div>
+                    <button>Get the link</button>
+
+
                     <h6>Get it on</h6>
                     <!-- App store links -->
                     <div class="mobile-links">
                         <a href="#"><img src="./img/apple-store-transparent.svg" alt="App Store" /></a>
                         <a href="#"><img src="./img/google-play-transparent.svg" alt="Google Play" /></a>
                     </div>
-                    <!-- Input for phone number and button to receive the app link -->
-                    <div class="input-div">
-                        <input type="tel" placeholder="Enter Phone Number" />
-                    </div>
-                    <button>Get the link</button>
                 </div>
             </div>
         </div>

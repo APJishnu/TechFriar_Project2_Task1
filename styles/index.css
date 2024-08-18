@@ -8,6 +8,18 @@
     padding: 0;
 
 }
+ /* animation keyframes for greeting marquee */
+ @keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
 
 
 body {
@@ -216,6 +228,7 @@ body {
     width: 770px;
     height: 7px;
     opacity: 50%;
+    animation: marquee 20s linear infinite;
 
 }
 
@@ -336,11 +349,12 @@ body {
 
 .vehicle-type {
     cursor: pointer;
-    background-color: #ffffff58;
+    background-color: #ffffff2a;
     color: #fff;
     border: none;
-    padding: 3px;
+    padding: 3px 16px;
     border-radius: 15px;
+    outline: none;
 }
 
 option {
@@ -385,6 +399,7 @@ option {
 
 .location,
 .pickup-time {
+   
     font-size: 12px;
     display: flex;
     flex-direction: row;
@@ -395,20 +410,25 @@ option {
     background-color: #fff;
     height: 100%;
     width: 188px;
+
+}
+.location{
+    padding-right: 16px!important;
+  
 }
 
 /* Location and pickup time specific styles */
 .location select {
-    margin-right: 10px;
+    appearance: none;
+    background-image: url("../img/Location.svg");
+    background-repeat: no-repeat;
+    background-position:left 16px center; /* 30px from left, 10px from top */
+    padding: 16px 16px 16px 36px;
+    background-size: 9px 12px;
     outline: none;
-    margin-left: 10px;
+
 }
 
-.map-pin {
-    margin-left: 16px;
-    padding: 0px;
-    color: #38b000;
-}
 
 .location-list {
     background-color: transparent;
@@ -436,6 +456,14 @@ option {
 .date-time {
     display: flex;
     column-gap: 10px;
+    appearance: none;
+    background-image: url("../img/date.svg");
+    background-repeat: no-repeat;
+    background-position:left 16px center; /* 30px from left, 10px from top */
+    padding: 16px 16px 16px 36px;
+    background-size: 9px 12px;
+    outline: none;
+   
 }
 
 /* Hidden date-time picker container */
@@ -460,6 +488,7 @@ option {
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
+    
 }
 
 .date-time-picker button,
@@ -470,6 +499,7 @@ option {
     background-color: #007BFF;
     color: #fff;
     cursor: pointer;
+  
 }
 
 /* Search button */
@@ -480,6 +510,7 @@ option {
     border-radius: 20px;
     display: grid;
     justify-content: center;
+    align-items: center;
 }
 
 .search-button button,
@@ -491,7 +522,9 @@ option {
     border: none;
     outline: none;
     box-shadow: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     transition: color 0.4s;
@@ -739,6 +772,7 @@ option {
     width: 394px;
     margin-left: 42px;
     margin-right: 53px;
+   
 }
 
 /* Car details list */
@@ -790,6 +824,7 @@ option {
     font-size: 12px;
     line-height: 18px;
     font-weight: 300;
+   
 }
 
 /* Price paragraph inside car details */
@@ -819,7 +854,7 @@ option {
     position: relative;
     margin-bottom: 34px;
     margin-top: 40px;
-    margin-left: -30px;
+ 
     width: 300px;
     height: 17px;
     display: flex;
@@ -877,7 +912,8 @@ option {
     width: 50%;
     max-width: 590px;
     height: 506px;
-    padding-right: 20px;
+    padding-right: 100px;
+
     /* Adjust padding for spacing */
 }
 
@@ -892,6 +928,7 @@ option {
     display: flex;
     gap: 17px;
     margin-bottom: 20px;
+    margin-top: 41px;
 }
 
 .ads-details .ads-input-fields input {
@@ -911,7 +948,7 @@ option {
     font-size: 14px;
     line-height: 21px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .ads-details .ads-btn {
@@ -924,6 +961,7 @@ option {
     font-size: 16px;
     line-height: 24px;
     border: 0;
+
 }
 
 /* Right section - app promo */
@@ -944,6 +982,7 @@ option {
 
 .mobile-div-2 {
     color: #ffffff;
+    padding-right: 60px;
 }
 
 .mobile-div-2 h6 {
@@ -955,6 +994,7 @@ option {
 .mobile-div-2 .mobile-links {
     display: flex;
     gap: 8px;
+    margin-top: 16px;
     margin-bottom: 20px;
 }
 
@@ -963,11 +1003,13 @@ option {
     height: 30px;
 }
 
-.input-div {
-    margin-bottom: 20px;
+
+.mobile-div-2 .paragraph1-mobile-div-2{
+    width:100%;
+    padding-bottom: 5px;
 }
 
-.mobile-div-2 input {
+.mobile-div-2 .input-div input{
     width: 100%;
     height: 45px;
     border-radius: 5px;
@@ -1080,6 +1122,7 @@ option {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
 }
 
 /* Vertical line in Layer 6 */
@@ -1109,6 +1152,7 @@ option {
     font-weight: 400;
     font-size: 34px;
     line-height: 51px;
+    margin-top: 56px;
 }
 
 /* Locations list inside Layer 6 container */
@@ -1118,7 +1162,7 @@ option {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 136px;
+    margin-top: 79px;
     gap: 4%;
     list-style: none;
 }
@@ -1620,18 +1664,7 @@ option {
         animation: marquee 30s linear infinite;
     }
 
-    /* animation keyframes for greeting marquee */
-    @keyframes marquee {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-
+   
 
     /*************************************************************************************************************/
 
@@ -1853,8 +1886,31 @@ option {
         height: 32px;
         color: #FFFFFF;
         font-weight: 400;
-        font-size: 13px;
+        font-size: 13px!important;
     }
+
+    .selector-options .selector-option{
+        font-size: 13px !important;
+    }
+    
+
+    .dropdown-options select{
+        appearance: none;
+        background-image: url("../img/Location.svg");
+        background-repeat: no-repeat;
+        background-position:left 16px center; /* 30px from left, 10px from top */
+        padding: 16px 16px 16px 36px;
+        background-size: 9px 12px;
+    }
+    .dropdown-options input{
+        appearance: none;
+        background-image: url("../img/date.svg");
+        background-repeat: no-repeat;
+        background-position: 16px center; /* 30px from left, 10px from top */
+        padding: 16px 16px 16px 36px;
+        background-size: 9px 12px;
+    }
+
 
 
     /***************************************************************************************************************/
@@ -2098,27 +2154,28 @@ option {
         display: flex;
         width: 100%;
         margin-top: -20px;
+        margin-left: 10px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start !important;
 
     }
 
     /* Price styling */
     .priceP {
 
-        font-size: 14px;
-        margin: 2px;
+        font-size: 14px!important;
 
     }
 
     /* Book button styling */
     .car-price-btn {
         background: #E21E26;
-
+        width: 128px!important;
         color: white;
         border: none;
-        padding: 4px 8px;
-        font-size: 12px;
+        padding: 9px 0px!important;
+        font-size: 12px !important;
+        font-weight: 600;
         border-radius: 4px;
         cursor: pointer;
     }
@@ -2189,6 +2246,10 @@ option {
         text-align: center;
     }
 
+    .app-promo-container .app-stores{
+        height: 245px;
+    }
+
     /* Container for input fields in the app promotion section */
     .app-promo-container .input-tag-div {
         width: 90%;
@@ -2196,6 +2257,7 @@ option {
         flex-direction: column;
         align-items: left;
         justify-content: left;
+        margin: 0!important;
     }
 
     /* Button styling for getting the link in the app promotion section */
@@ -2291,9 +2353,17 @@ option {
 
     /* guildlines  styles  */
 
+    .layer_5{
+        width: 100%;
+        padding: 16px 0px !important;
+    }
+
+
     .guildlines-main-div {
+      
         flex-direction: column;
         align-items: center;
+        width: 100% !important;
     }
 
     .step-container {
@@ -2315,7 +2385,7 @@ option {
     }
 
     .guildline {
-        width: 328px;
+        width: 100%;
         /* Full width of the step container */
         background-color: #ffffff;
         border: 0.5px solid black;
@@ -2360,20 +2430,27 @@ option {
 
     /* Heading styling for layer_6 section */
     .layer-6-heading {
-        font-size: 18px;
+        font-size: 16px;
         color: white;
+    }
+    .layer-6-heading-div{
+        margin: 0 !important;
+        justify-content: left !important;
+     
     }
 
     /* Styling for the list of locations in layer_6 */
     .layer-6-locations {
-        top: -100px;
-        position: absolute;
+        top: -70px;
+        display: flex !important;
+        flex-wrap: wrap!important;
+        justify-content: left!important;
         list-style-type: none;
         padding: 0;
         margin: 0;
-        gap: 0px !important;
+        gap: 10px !important;
         overflow: hidden;
-        width: 90%;
+        width: 100%;
 
     }
 
@@ -2395,7 +2472,8 @@ option {
 
     /* Paragraph text styling in layer_6 locations list */
     .layer-6-locations li p {
-        font-size: 10px !important;
+        font-weight: 600px;
+        font-size: 14px !important;
         color: white;
         margin: 0;
     }
@@ -2434,7 +2512,7 @@ option {
         padding-top: 60px !important;
         background-color: #fff;
         padding: 0px 0px;
-        padding-bottom: 119px;
+        padding-bottom: 56px;
         overflow: hidden;
     }
 
