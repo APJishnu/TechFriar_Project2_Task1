@@ -1918,12 +1918,14 @@ option {
 
     /* Carousel container styling for mobile */
     .carousel-container {
-        width: 100%;
+        width: 100vw;
+        height: 217px;
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         overflow: hidden;
+        margin-left: -16px;
         /* Prevent overflow */
     }
 
@@ -1933,6 +1935,7 @@ option {
         height: 217px;
         overflow: hidden;
         position: relative;
+        border-radius: 0;
 
     }
 
@@ -1987,15 +1990,15 @@ option {
 
     /* Carousel dots styling for mobile */
     .carousel-dots {
-        bottom: 10px;
+        bottom:    28px;
         display: flex;
         justify-content: center;
         gap: 5px;
     }
 
     .carousel-dots .dot {
-        width: 5px;
-        height: 5px;
+        width: 7px;
+        height: 7px;
     }
 
 
